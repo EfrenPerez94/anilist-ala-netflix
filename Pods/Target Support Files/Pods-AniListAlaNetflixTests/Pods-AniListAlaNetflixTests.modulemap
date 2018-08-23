@@ -1,0 +1,6 @@
+framework module Pods_AniListAlaNetflixTests {
+  umbrella header "Pods-AniListAlaNetflixTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
