@@ -12,6 +12,7 @@ import UIKit
 /// String extension to store cell identifiers.
 private extension String {
     static let listCell = "ListCellIdentifier"
+    static let homeCell = "HomeCellIdentifier"
 }
 
 /// Anime View Controller. Shows a Table View with embedded collection views.
@@ -31,7 +32,8 @@ class AnimeViewController: UIViewController, UITableViewDelegate, UITableViewDat
         view.addSubview(tableView)
         
         // Registration of cells
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: .listCell)
+        tableView.register(AnimeListTableViewCell.self, forCellReuseIdentifier: .listCell)
+        tableView.register(HomeTableViewCell.self, forCellReuseIdentifier: .homeCell)
     }
     
     // MARK: - Table view data source
@@ -44,8 +46,16 @@ class AnimeViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = (tableView.dequeueReusableCell(withIdentifier: .listCell, for: indexPath))
-        return cell
-       
+        if indexPath.row > 0 {
+            guard let cell = (tableView.dequeueReusableCell(withIdentifier: .listCell, for: indexPath) as? AnimeListTableViewCell) else {
+                fatalError("AnimeListTableViewCell is not initialized")
+            }
+            return cell
+        } else {
+            guard let cell = (tableView.dequeueReusableCell(withIdentifier: .homeCell, for: indexPath) as? HomeTableViewCell) else {
+                fatalError("HomeTableViewCell is not initialized")
+            }
+            return cell
+        }
     }
 }
