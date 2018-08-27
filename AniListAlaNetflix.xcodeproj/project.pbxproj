@@ -22,9 +22,9 @@
 		1A2DDE6E2134A3060038E104 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE642134A3060038E104 /* Title.swift */; };
 		1A2DDE702134A3060038E104 /* Media.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE662134A3060038E104 /* Media.swift */; };
 		1A2DDE712134A3060038E104 /* CoverImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE672134A3060038E104 /* CoverImage.swift */; };
-		1A2DDE752134ACCC0038E104 /* AniListQuerys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE742134ACCC0038E104 /* AniListQuerys.swift */; };
 		1A2DDE772134ACEE0038E104 /* AniListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE762134ACEE0038E104 /* AniListRepository.swift */; };
 		1A2DDE792134AD010038E104 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE782134AD010038E104 /* Season.swift */; };
+		1A2DDE7B2134AE360038E104 /* AniListQuerys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE7A2134AE360038E104 /* AniListQuerys.swift */; };
 		831F8B25BD7DC41D8CA9B37C /* Pods_AniListAlaNetflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF14842D67B7B4D55C457B31 /* Pods_AniListAlaNetflix.framework */; };
 		A2BA46C3F98CB5F29333B5F4 /* Pods_AniListAlaNetflixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F68A18EF45C71EF8A401C44 /* Pods_AniListAlaNetflixTests.framework */; };
 		F23EA4A530AFBE34D2D648A3 /* Pods_AniListAlaNetflixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE190A65DB25F071F31E340F /* Pods_AniListAlaNetflixUITests.framework */; };
@@ -69,9 +69,9 @@
 		1A2DDE642134A3060038E104 /* Title.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		1A2DDE662134A3060038E104 /* Media.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Media.swift; sourceTree = "<group>"; };
 		1A2DDE672134A3060038E104 /* CoverImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverImage.swift; sourceTree = "<group>"; };
-		1A2DDE742134ACCC0038E104 /* AniListQuerys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniListQuerys.swift; sourceTree = "<group>"; };
 		1A2DDE762134ACEE0038E104 /* AniListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniListRepository.swift; sourceTree = "<group>"; };
 		1A2DDE782134AD010038E104 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		1A2DDE7A2134AE360038E104 /* AniListQuerys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AniListQuerys.swift; sourceTree = "<group>"; };
 		639F3319BAF8814794CB449C /* Pods-AniListAlaNetflixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniListAlaNetflixTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AniListAlaNetflixTests/Pods-AniListAlaNetflixTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F722848D21D6F508B254AE6 /* Pods-AniListAlaNetflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniListAlaNetflix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AniListAlaNetflix/Pods-AniListAlaNetflix.debug.xcconfig"; sourceTree = "<group>"; };
 		8B29CC665BD68BA3CF0E9290 /* Pods-AniListAlaNetflixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniListAlaNetflixUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AniListAlaNetflixUITests/Pods-AniListAlaNetflixUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -224,12 +224,11 @@
 		1A2DDE732134AC340038E104 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				1A2DDE742134ACCC0038E104 /* AniListQuerys.swift */,
+				1A2DDE7A2134AE360038E104 /* AniListQuerys.swift */,
 				1A2DDE762134ACEE0038E104 /* AniListRepository.swift */,
 				1A2DDE782134AD010038E104 /* Season.swift */,
 			);
-			name = Network;
-			path = "New Group";
+			path = Network;
 			sourceTree = "<group>";
 		};
 		82AB7B947B55BE1FB0090F28 /* Frameworks */ = {
@@ -468,11 +467,11 @@
 				1A1DD27E212F278E008FF51B /* String.swift in Sources */,
 				1A2DDE6E2134A3060038E104 /* Title.swift in Sources */,
 				1A1DD27D212F278E008FF51B /* Constants.swift in Sources */,
+				1A2DDE7B2134AE360038E104 /* AniListQuerys.swift in Sources */,
 				1A2DDE6A2134A3060038E104 /* Page.swift in Sources */,
 				1A2DDE712134A3060038E104 /* CoverImage.swift in Sources */,
 				1A2DDE702134A3060038E104 /* Media.swift in Sources */,
 				1A2DDE792134AD010038E104 /* Season.swift in Sources */,
-				1A2DDE752134ACCC0038E104 /* AniListQuerys.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
