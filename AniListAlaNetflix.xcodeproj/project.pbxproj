@@ -12,11 +12,8 @@
 		1A1DD248212F26E8008FF51B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A1DD246212F26E8008FF51B /* LaunchScreen.storyboard */; };
 		1A1DD253212F26E8008FF51B /* AniListAlaNetflixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1DD252212F26E8008FF51B /* AniListAlaNetflixTests.swift */; };
 		1A1DD25E212F26E8008FF51B /* AniListAlaNetflixUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1DD25D212F26E8008FF51B /* AniListAlaNetflixUITests.swift */; };
-		1A1DD27D212F278E008FF51B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1DD26C212F278E008FF51B /* Constants.swift */; };
 		1A1DD27E212F278E008FF51B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1DD26E212F278E008FF51B /* String.swift */; };
 		1A1DD280212F278E008FF51B /* AnimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1DD272212F278E008FF51B /* AnimeViewController.swift */; };
-		1A2DDE2F212F3D880038E104 /* AniListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE2D212F3D880038E104 /* AniListRepository.swift */; };
-		1A2DDE30212F3D880038E104 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE2E212F3D880038E104 /* Endpoint.swift */; };
 		1A2DDE32212F3D950038E104 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE31212F3D950038E104 /* UIImageView.swift */; };
 		1A2DDE36212F3DB80038E104 /* AnimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE33212F3DB80038E104 /* AnimeCollectionViewCell.swift */; };
 		1A2DDE37212F3DB80038E104 /* AnimeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE34212F3DB80038E104 /* AnimeListTableViewCell.swift */; };
@@ -55,11 +52,8 @@
 		1A1DD259212F26E8008FF51B /* AniListAlaNetflixUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AniListAlaNetflixUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A1DD25D212F26E8008FF51B /* AniListAlaNetflixUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AniListAlaNetflixUITests.swift; sourceTree = "<group>"; };
 		1A1DD25F212F26E8008FF51B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1A1DD26C212F278E008FF51B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1A1DD26E212F278E008FF51B /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		1A1DD272212F278E008FF51B /* AnimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeViewController.swift; sourceTree = "<group>"; };
-		1A2DDE2D212F3D880038E104 /* AniListRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AniListRepository.swift; sourceTree = "<group>"; };
-		1A2DDE2E212F3D880038E104 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		1A2DDE31212F3D950038E104 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		1A2DDE33212F3DB80038E104 /* AnimeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeCollectionViewCell.swift; sourceTree = "<group>"; };
 		1A2DDE34212F3DB80038E104 /* AnimeListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeListTableViewCell.swift; sourceTree = "<group>"; };
@@ -128,12 +122,9 @@
 		1A1DD23C212F26E6008FF51B /* AniListAlaNetflix */ = {
 			isa = PBXGroup;
 			children = (
-				1A2DDE2C212F3D880038E104 /* Network */,
 				1A1DD271212F278E008FF51B /* Controllers */,
 				1A1DD276212F278E008FF51B /* Views */,
-				1A1DD270212F278E008FF51B /* Models */,
 				1A1DD26D212F278E008FF51B /* Extensions */,
-				1A1DD26B212F278E008FF51B /* Utility */,
 				1A1DD23D212F26E6008FF51B /* AppDelegate.swift */,
 				1A1DD244212F26E8008FF51B /* Assets.xcassets */,
 				1A1DD246212F26E8008FF51B /* LaunchScreen.storyboard */,
@@ -160,14 +151,6 @@
 			path = AniListAlaNetflixUITests;
 			sourceTree = "<group>";
 		};
-		1A1DD26B212F278E008FF51B /* Utility */ = {
-			isa = PBXGroup;
-			children = (
-				1A1DD26C212F278E008FF51B /* Constants.swift */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
 		1A1DD26D212F278E008FF51B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -175,13 +158,6 @@
 				1A2DDE31212F3D950038E104 /* UIImageView.swift */,
 			);
 			path = Extensions;
-			sourceTree = "<group>";
-		};
-		1A1DD270212F278E008FF51B /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		1A1DD271212F278E008FF51B /* Controllers */ = {
@@ -200,16 +176,6 @@
 				1A2DDE35212F3DB80038E104 /* HomeTableViewCell.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		1A2DDE2C212F3D880038E104 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				1A2DDE2D212F3D880038E104 /* AniListRepository.swift */,
-				1A2DDE2E212F3D880038E104 /* Endpoint.swift */,
-			);
-			name = Network;
-			path = ../../../Documents/wizelineHomework/wizelineHomework/Network;
 			sourceTree = "<group>";
 		};
 		82AB7B947B55BE1FB0090F28 /* Frameworks */ = {
@@ -444,11 +410,8 @@
 				1A2DDE36212F3DB80038E104 /* AnimeCollectionViewCell.swift in Sources */,
 				1A1DD23E212F26E6008FF51B /* AppDelegate.swift in Sources */,
 				1A2DDE32212F3D950038E104 /* UIImageView.swift in Sources */,
-				1A2DDE2F212F3D880038E104 /* AniListRepository.swift in Sources */,
 				1A2DDE38212F3DB80038E104 /* HomeTableViewCell.swift in Sources */,
 				1A1DD27E212F278E008FF51B /* String.swift in Sources */,
-				1A2DDE30212F3D880038E104 /* Endpoint.swift in Sources */,
-				1A1DD27D212F278E008FF51B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
