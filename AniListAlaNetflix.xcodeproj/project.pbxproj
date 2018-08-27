@@ -211,9 +211,9 @@
 		1A2DDE5C2134A3060038E104 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1A2DDE5D2134A3060038E104 /* Page */,
-				1A2DDE602134A3060038E104 /* ErrorDescription.swift */,
 				1A2DDE612134A3060038E104 /* AniList.swift */,
+				1A2DDE602134A3060038E104 /* ErrorDescription.swift */,
+				1A2DDE5D2134A3060038E104 /* Page */,
 				1A2DDE622134A3060038E104 /* Media */,
 			);
 			path = Models;
