@@ -10,11 +10,12 @@ import Foundation
 
 /// Model for an AniList request.
 struct AniList: Codable {
-    let data: File?
+    let data: MediaData?
     let errors: [ErrorDescription]?
 }
 
-struct File: Codable {
+/// Model to organize data from the API.
+struct MediaData: Codable {
     let page: Page?
     let media: Media?
     

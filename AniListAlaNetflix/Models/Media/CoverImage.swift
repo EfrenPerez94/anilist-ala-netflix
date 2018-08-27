@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Model for cover images variations.
 struct CoverImage: Codable {
     let medium: String?
     let large: String?

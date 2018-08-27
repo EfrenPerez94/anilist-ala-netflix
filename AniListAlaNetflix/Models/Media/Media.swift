@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Model for media from AniList.
 struct Media: Codable {
     let id: Int
     let description: String?
@@ -20,6 +21,4 @@ struct Media: Codable {
     let title: Title
     let coverImage: CoverImage
     let trailer: String?
-    let characters: Character?
-    
 }

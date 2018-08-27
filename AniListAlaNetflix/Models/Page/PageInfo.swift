@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Model for pagination information.
 struct PageInfo: Codable {
     let hasNextPage: Bool?
 }

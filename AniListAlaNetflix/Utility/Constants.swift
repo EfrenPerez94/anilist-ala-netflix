@@ -8,5 +8,5 @@
 
 import Foundation
 
-/// Base URL to perform requests to AniList API.
-public let apiURL = "https://anilist.co/api/"
+/// Base URL to perform requests from AniList API.
+public let apiURL = "https://graphql.anilist.co"

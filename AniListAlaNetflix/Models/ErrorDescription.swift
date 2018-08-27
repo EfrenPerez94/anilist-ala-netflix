@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Descripton for GraphQL query errors.
 struct ErrorDescription: Codable {
     let message: String
     let status: Int

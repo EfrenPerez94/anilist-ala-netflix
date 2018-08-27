@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Model to store page data.
 struct Page: Codable {
     let pageInfo: PageInfo?
     let media: [Media]?

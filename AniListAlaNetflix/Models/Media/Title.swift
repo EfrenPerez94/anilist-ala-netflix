@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Model for media title.
 struct Title: Codable {
     let romaji: String?
     let english: String?
