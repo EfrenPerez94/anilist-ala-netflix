@@ -23,7 +23,7 @@ class AnimeViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         
         // Table View Configuration
-        navigationItem.title = "My NETFLIX App"
+        navigationItem.title = "Home"
         tableView = UITableView(frame: self.view.bounds)
         tableView.delegate = self
         tableView.dataSource = self
@@ -47,5 +47,9 @@ class AnimeViewController: UIViewController, UITableViewDelegate, UITableViewDat
         let cell = (tableView.dequeueReusableCell(withIdentifier: .listCell, for: indexPath))
         return cell
        
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        navigationController?.pushViewController(DetailViewController(), animated: true)
     }
 }
