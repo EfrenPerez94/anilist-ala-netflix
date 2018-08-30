@@ -52,7 +52,7 @@ class DetailView: UIView, UITableViewDelegate, UITableViewDataSource {
         animeDescription.numberOfLines = 0
         animeDescription.textAlignment = .center
         animeDescription.translatesAutoresizingMaskIntoConstraints = false
-        animeDescription.text = "Anime Description\nHello World!\n Bye :)"
+        animeDescription.text = "Anime Description\nHello!\n Bye :)"
         return animeDescription
     }()
     
@@ -97,7 +97,7 @@ class DetailView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = (tableView.dequeueReusableCell(withIdentifier: .animeCell, for: indexPath) as? DetailCell) else {
-            fatalError("customTable is not initialized")
+            fatalError("DetailCell is not initialized")
         }
         cell.isUserInteractionEnabled = false
         cell.backgroundColor = try? "000000".getColor()

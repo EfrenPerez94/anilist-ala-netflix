@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /// Detail Cell. Create a custom cell for anime details.
-class DetailCell: UITableViewCell {
+final class DetailCell: UITableViewCell {
     
     // MARK: - Initializers
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
