@@ -142,12 +142,10 @@
 		1A1DD23C212F26E6008FF51B /* AniListAlaNetflix */ = {
 			isa = PBXGroup;
 			children = (
+				1A5DE49E213BA7A400102611 /* Views */,
 				1A2DDE732134AC340038E104 /* Network */,
 				1A1DD271212F278E008FF51B /* Controllers */,
-				1A1DD276212F278E008FF51B /* Views */,
-				1A1DD23D212F26E6008FF51B /* AppDelegate.swift */,
 				1A1DD26D212F278E008FF51B /* Extensions */,
-				1A1DD26B212F278E008FF51B /* Utility */,
 				1A2DDE5C2134A3060038E104 /* Models */,
 				1A1DD244212F26E8008FF51B /* Assets.xcassets */,
 				1A1DD23D212F26E6008FF51B /* AppDelegate.swift */,
@@ -188,9 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				1A1DD272212F278E008FF51B /* AnimeViewController.swift */,
-                1A2DDE34212F3DB80038E104 /* AnimeListTableViewCell.swift */,
-                1A2DDE33212F3DB80038E104 /* AnimeCollectionViewCell.swift */,
-                1A2DDE35212F3DB80038E104 /* HomeTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +228,16 @@
 				1A2DDE782134AD010038E104 /* Season.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		1A5DE49E213BA7A400102611 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1A2DDE34212F3DB80038E104 /* AnimeListTableViewCell.swift */,
+				1A2DDE33212F3DB80038E104 /* AnimeCollectionViewCell.swift */,
+				1A2DDE35212F3DB80038E104 /* HomeTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		82AB7B947B55BE1FB0090F28 /* Frameworks */ = {
@@ -470,13 +475,10 @@
 				1A2DDE38212F3DB80038E104 /* HomeTableViewCell.swift in Sources */,
 				1A1DD27E212F278E008FF51B /* String.swift in Sources */,
 				1A2DDE6C2134A3060038E104 /* AniList.swift in Sources */,
-				1A1DD23E212F26E6008FF51B /* AppDelegate.swift in Sources */,
 				1A2DDE772134ACEE0038E104 /* AniListRepository.swift in Sources */,
 				1A2DDE692134A3060038E104 /* PageInfo.swift in Sources */,
 				1A2DDE6B2134A3060038E104 /* ErrorDescription.swift in Sources */,
-				1A1DD27E212F278E008FF51B /* String.swift in Sources */,
 				1A2DDE6E2134A3060038E104 /* Title.swift in Sources */,
-				1A1DD27D212F278E008FF51B /* Constants.swift in Sources */,
 				1A2DDE7B2134AE360038E104 /* AniListQuerys.swift in Sources */,
 				1A2DDE6A2134A3060038E104 /* Page.swift in Sources */,
 				1A2DDE712134A3060038E104 /* CoverImage.swift in Sources */,
