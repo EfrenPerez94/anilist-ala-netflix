@@ -8,8 +8,6 @@
 
 import Foundation
 
-typealias Parameters = [String: Any]
-
 class AniListRepository {
     
     /// Perform a GET request to AniList, handling errors and response.
