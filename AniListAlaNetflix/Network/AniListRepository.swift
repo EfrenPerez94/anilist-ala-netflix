@@ -13,9 +13,9 @@ class AniListRepository {
     /// Perform a GET request to AniList, handling errors and response.
     ///sdf
     /// - Parameters:
-    ///   - endpoint: Use to specify the API endpoint.
+    ///   - query: Use to specify the API endpoint.
     ///   - completion: Closure that returns `data` for the network request.
-    ///   - data: Data information retrieve from the API.
+    ///   - data: Data information retrieve from the API as `AniList` object.
     func execute(query: Parameters, completion: @escaping (_ data: AniList?) -> Void) {
         
         guard let url = URL(string: apiURL) else { return }

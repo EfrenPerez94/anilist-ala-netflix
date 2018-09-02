@@ -25,6 +25,7 @@ func retriveAnime(id: Int) -> Parameters {
                             status
                             episodes
                             duration
+                            bannerImage
                             title {
                               romaji
                               english
@@ -72,6 +73,7 @@ func retriveAnimesForSeason(fromPage: Int, animesPerPage: Int, season: Season) -
                         }
                         media (season: $season, type: ANIME) {
                             id
+                            season
                             title {
                                 romaji
                                 english

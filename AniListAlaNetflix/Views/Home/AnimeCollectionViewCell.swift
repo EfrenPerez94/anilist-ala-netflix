@@ -10,14 +10,22 @@ import Foundation
 import UIKit
 
 /// Anime Collection View Cell. Create a custom cell for an anime.
-class AnimeCollectionViewCell: UICollectionViewCell {
+final class AnimeCollectionViewCell: UICollectionViewCell {
 
+    var cellID: Int?
+    var cellData: Media? {
+        didSet {
+            animeTitle.text = cellData?.title.romaji ?? ""
+            animePoster.imageFromURL(cellData?.coverImage.medium ?? "")
+        }
+    }
+    
     // MARK: - Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
-        addSubview(animeName)
+        addSubview(animeTitle)
         addSubview(animePoster)
-        backgroundColor = try? "0A0A0A".getColor()
+        backgroundColor = .darkBackground
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -27,21 +35,21 @@ class AnimeCollectionViewCell: UICollectionViewCell {
     // MARK: - Private properties
     private var isViewConstrained = false
     
-    lazy private var animeName: UILabel = {
-        let label = UILabel()
-        label.textColor = try? "FFFFFF".getColor()
-        label.font = UIFont.systemFont(ofSize: 16)
-        label.textAlignment = .center
-        label.text = "lorem"
-        label.translatesAutoresizingMaskIntoConstraints = false
-        return label
+    lazy private var animeTitle: UILabel = {
+        let animeTitle = UILabel()
+        animeTitle.textColor = .lightTextColor
+        animeTitle.lineBreakMode = .byWordWrapping
+        animeTitle.numberOfLines = 0
+        animeTitle.font = UIFont.systemFont(ofSize: 12)
+        animeTitle.textAlignment = .center
+        animeTitle.translatesAutoresizingMaskIntoConstraints = false
+        return animeTitle
     }()
     
     lazy private var animePoster: UIImageView = {
-        let imageView = UIImageView()
-        imageView.imageFromURL("https://cdn.anilist.co/img/dir/anime/med/1-K8GMFCAzTIin.jpg")
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        return imageView
+        let animePoster = UIImageView()
+        animePoster.translatesAutoresizingMaskIntoConstraints = false
+        return animePoster
     }()
     
     // MARK: - Constraints setup.
@@ -58,14 +66,14 @@ class AnimeCollectionViewCell: UICollectionViewCell {
         if !isViewConstrained {
             let contraints = [
                 animePoster.topAnchor.constraint(equalTo: topAnchor),
-                animePoster.heightAnchor.constraint(equalToConstant: frame.width * 1.5),
+                animePoster.heightAnchor.constraint(equalToConstant: frame.height * aspectRatio),
                 animePoster.widthAnchor.constraint(equalToConstant: frame.width),
                 animePoster.centerXAnchor.constraint(equalTo: centerXAnchor),
                 
-                animeName.topAnchor.constraint(equalTo: animePoster.bottomAnchor),
-                animeName.centerXAnchor.constraint(equalTo: centerXAnchor),
-                animeName.heightAnchor.constraint(equalToConstant: frame.height / 5),
-                animeName.widthAnchor.constraint(equalTo: widthAnchor)
+                animeTitle.topAnchor.constraint(equalTo: animePoster.bottomAnchor),
+                animeTitle.centerXAnchor.constraint(equalTo: centerXAnchor),
+                animeTitle.widthAnchor.constraint(equalTo: widthAnchor),
+                animeTitle.bottomAnchor.constraint(equalTo: bottomAnchor)
             ]
             NSLayoutConstraint.activate(contraints)
             isViewConstrained = true

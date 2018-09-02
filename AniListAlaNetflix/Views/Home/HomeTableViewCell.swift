@@ -15,7 +15,8 @@ class HomeTableViewCell: UITableViewCell {
     // MARK: - Initializers
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubview(title)
+        backgroundColor = .darkBackground
+        addSubview(backgroundImage)
         addSubview(message)
     }
     
@@ -26,20 +27,20 @@ class HomeTableViewCell: UITableViewCell {
     // MARK: - Private properties
     private var isViewConstrained = false
     
-    lazy private var title: UILabel = {
-        let title = UILabel()
-        title.font = UIFont.systemFont(ofSize: 20)
-        title.textAlignment = .center
-        title.text = "ANIMES FROM API"
-        title.translatesAutoresizingMaskIntoConstraints = false
-        return title
+    lazy private var backgroundImage: UIImageView = {
+        let backgroundImage = UIImageView()
+        backgroundImage.image = #imageLiteral(resourceName: "homeBackground")
+        backgroundImage.contentMode = .scaleAspectFill
+        backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+        return backgroundImage
     }()
     
     lazy var message: UILabel = {
         let message = UILabel()
-        message.font = UIFont.systemFont(ofSize: 16)
+        message.textColor = .lightTextColor
+        message.font = UIFont.systemFont(ofSize: 18)
         message.textAlignment = .center
-        message.text = "lorem ipsum dolor sit amet"
+        message.text = "Until 50 animes for season"
         message.translatesAutoresizingMaskIntoConstraints = false
         return message
     }()
@@ -57,12 +58,11 @@ class HomeTableViewCell: UITableViewCell {
     private func setupConstraints() {
         if !isViewConstrained {
             let constraints = [
-                title.centerXAnchor.constraint(equalTo: centerXAnchor),
-                title.centerYAnchor.constraint(equalTo: centerYAnchor),
-                title.widthAnchor.constraint(equalTo: widthAnchor),
-                title.heightAnchor.constraint(equalToConstant: frame.height / 5),
+                backgroundImage.topAnchor.constraint(equalTo: topAnchor),
+                backgroundImage.centerXAnchor.constraint(equalTo: centerXAnchor),
+                backgroundImage.heightAnchor.constraint(equalToConstant: frame.height * aspectRatio),
                 
-                message.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 10),
+                message.topAnchor.constraint(equalTo: backgroundImage.bottomAnchor, constant: 10),
                 message.widthAnchor.constraint(equalTo: widthAnchor),
                 message.heightAnchor.constraint(equalToConstant: frame.height / 5),
                 message.centerXAnchor.constraint(equalTo: centerXAnchor)

@@ -20,5 +20,6 @@ struct Media: Codable {
     let duration: Int?
     let title: Title
     let coverImage: CoverImage
+    let bannerImage: String?
     let trailer: String?
 }

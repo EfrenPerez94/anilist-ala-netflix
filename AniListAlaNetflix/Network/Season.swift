@@ -8,10 +8,11 @@
 
 import Foundation
 
-/// Season in wich the an anime was released
+/// The season the anime was initially released in.
 enum Season: String {
     case winter = "WINTER"
     case spring = "SPRING"
     case summer = "SUMMER"
     case fall = "FALL"
+    static let allValues = [winter, spring, summer, fall]
 }

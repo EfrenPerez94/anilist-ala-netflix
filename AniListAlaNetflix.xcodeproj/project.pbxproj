@@ -15,6 +15,8 @@
 		1A1DD27E212F278E008FF51B /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1DD26E212F278E008FF51B /* String.swift */; };
 		1A1DD280212F278E008FF51B /* AnimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A1DD272212F278E008FF51B /* AnimeViewController.swift */; };
 		1A2DDE32212F3D950038E104 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE31212F3D950038E104 /* UIImageView.swift */; };
+		1A2DDE36212F3DB80038E104 /* AnimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE33212F3DB80038E104 /* AnimeCollectionViewCell.swift */; };
+		1A2DDE38212F3DB80038E104 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE35212F3DB80038E104 /* HomeTableViewCell.swift */; };
 		1A2DDE692134A3060038E104 /* PageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE5E2134A3060038E104 /* PageInfo.swift */; };
 		1A2DDE6A2134A3060038E104 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE5F2134A3060038E104 /* Page.swift */; };
 		1A2DDE6B2134A3060038E104 /* ErrorDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE602134A3060038E104 /* ErrorDescription.swift */; };
@@ -26,13 +28,11 @@
 		1A2DDE792134AD010038E104 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE782134AD010038E104 /* Season.swift */; };
 		1A2DDE7B2134AE360038E104 /* AniListQuerys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE7A2134AE360038E104 /* AniListQuerys.swift */; };
 		1A2DDE7D2135B2190038E104 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2DDE7C2135B2190038E104 /* DetailViewController.swift */; };
-		1A5DE4A5213BBB2F00102611 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4A4213BBB2F00102611 /* Constants.swift */; };
-		1A5DE4AA213BBB4200102611 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4A7213BBB4200102611 /* HomeTableViewCell.swift */; };
-		1A5DE4AB213BBB4200102611 /* AnimeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4A8213BBB4200102611 /* AnimeCollectionViewCell.swift */; };
-		1A5DE4AC213BBB4200102611 /* AnimeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4A9213BBB4200102611 /* AnimeListTableViewCell.swift */; };
+		1A5DE4A1213BA90B00102611 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4A0213BA90B00102611 /* Constants.swift */; };
+		1A5DE4AE213BBE1100102611 /* AnimeListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4AD213BBE1100102611 /* AnimeListTableViewCell.swift */; };
 		1A5DE4B3213BC3CB00102611 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4B1213BC3CB00102611 /* DetailView.swift */; };
 		1A5DE4B4213BC3CB00102611 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4B2213BC3CB00102611 /* DetailCell.swift */; };
-		1A5DE4B6213BC40400102611 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4B5213BC40400102611 /* UIViewController.swift */; };
+		1A5DE4B8213BC6D600102611 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4B7213BC6D600102611 /* UIViewController.swift */; };
 		831F8B25BD7DC41D8CA9B37C /* Pods_AniListAlaNetflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF14842D67B7B4D55C457B31 /* Pods_AniListAlaNetflix.framework */; };
 		A2BA46C3F98CB5F29333B5F4 /* Pods_AniListAlaNetflixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F68A18EF45C71EF8A401C44 /* Pods_AniListAlaNetflixTests.framework */; };
 		F23EA4A530AFBE34D2D648A3 /* Pods_AniListAlaNetflixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE190A65DB25F071F31E340F /* Pods_AniListAlaNetflixUITests.framework */; };
@@ -70,6 +70,8 @@
 		1A1DD26E212F278E008FF51B /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		1A1DD272212F278E008FF51B /* AnimeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeViewController.swift; sourceTree = "<group>"; };
 		1A2DDE31212F3D950038E104 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		1A2DDE33212F3DB80038E104 /* AnimeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeCollectionViewCell.swift; sourceTree = "<group>"; };
+		1A2DDE35212F3DB80038E104 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		1A2DDE5E2134A3060038E104 /* PageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageInfo.swift; sourceTree = "<group>"; };
 		1A2DDE5F2134A3060038E104 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		1A2DDE602134A3060038E104 /* ErrorDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorDescription.swift; sourceTree = "<group>"; };
@@ -81,13 +83,11 @@
 		1A2DDE782134AD010038E104 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		1A2DDE7A2134AE360038E104 /* AniListQuerys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AniListQuerys.swift; sourceTree = "<group>"; };
 		1A2DDE7C2135B2190038E104 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		1A5DE4A4213BBB2F00102611 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		1A5DE4A7213BBB4200102611 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		1A5DE4A8213BBB4200102611 /* AnimeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeCollectionViewCell.swift; sourceTree = "<group>"; };
-		1A5DE4A9213BBB4200102611 /* AnimeListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeListTableViewCell.swift; sourceTree = "<group>"; };
+		1A5DE4A0213BA90B00102611 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1A5DE4AD213BBE1100102611 /* AnimeListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimeListTableViewCell.swift; sourceTree = "<group>"; };
 		1A5DE4B1213BC3CB00102611 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1A5DE4B2213BC3CB00102611 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
-		1A5DE4B5213BC40400102611 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		1A5DE4B7213BC6D600102611 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		639F3319BAF8814794CB449C /* Pods-AniListAlaNetflixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniListAlaNetflixTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AniListAlaNetflixTests/Pods-AniListAlaNetflixTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F722848D21D6F508B254AE6 /* Pods-AniListAlaNetflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniListAlaNetflix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AniListAlaNetflix/Pods-AniListAlaNetflix.debug.xcconfig"; sourceTree = "<group>"; };
 		8B29CC665BD68BA3CF0E9290 /* Pods-AniListAlaNetflixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniListAlaNetflixUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AniListAlaNetflixUITests/Pods-AniListAlaNetflixUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,9 +152,9 @@
 		1A1DD23C212F26E6008FF51B /* AniListAlaNetflix */ = {
 			isa = PBXGroup;
 			children = (
-				1A5DE4A6213BBB4200102611 /* Views */,
-				1A5DE4A3213BBB2F00102611 /* Utility */,
 				1A2DDE732134AC340038E104 /* Network */,
+				1A5DE49F213BA90B00102611 /* Utility */,
+				1A5DE49E213BA7A400102611 /* Views */,
 				1A1DD271212F278E008FF51B /* Controllers */,
 				1A1DD26D212F278E008FF51B /* Extensions */,
 				1A2DDE5C2134A3060038E104 /* Models */,
@@ -187,7 +187,7 @@
 		1A1DD26D212F278E008FF51B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				1A5DE4B5213BC40400102611 /* UIViewController.swift */,
+				1A5DE4B7213BC6D600102611 /* UIViewController.swift */,
 				1A1DD26E212F278E008FF51B /* String.swift */,
 				1A2DDE31212F3D950038E104 /* UIImageView.swift */,
 			);
@@ -243,29 +243,29 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		1A5DE4A3213BBB2F00102611 /* Utility */ = {
+		1A5DE49E213BA7A400102611 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				1A5DE4A4213BBB2F00102611 /* Constants.swift */,
-			);
-			path = Utility;
-			sourceTree = "<group>";
-		};
-		1A5DE4A6213BBB4200102611 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				1A5DE4AF213BC3BC00102611 /* Home */,
+				1A5DE4A2213BAF6300102611 /* Home */,
 				1A5DE4B0213BC3CB00102611 /* Detail */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		1A5DE4AF213BC3BC00102611 /* Home */ = {
+		1A5DE49F213BA90B00102611 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				1A5DE4A9213BBB4200102611 /* AnimeListTableViewCell.swift */,
-				1A5DE4A8213BBB4200102611 /* AnimeCollectionViewCell.swift */,
-				1A5DE4A7213BBB4200102611 /* HomeTableViewCell.swift */,
+				1A5DE4A0213BA90B00102611 /* Constants.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		1A5DE4A2213BAF6300102611 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1A5DE4AD213BBE1100102611 /* AnimeListTableViewCell.swift */,
+				1A2DDE33212F3DB80038E104 /* AnimeCollectionViewCell.swift */,
+				1A2DDE35212F3DB80038E104 /* HomeTableViewCell.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -506,27 +506,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A5DE4AE213BBE1100102611 /* AnimeListTableViewCell.swift in Sources */,
 				1A1DD280212F278E008FF51B /* AnimeViewController.swift in Sources */,
+				1A2DDE36212F3DB80038E104 /* AnimeCollectionViewCell.swift in Sources */,
 				1A1DD23E212F26E6008FF51B /* AppDelegate.swift in Sources */,
 				1A2DDE32212F3D950038E104 /* UIImageView.swift in Sources */,
-				1A5DE4AA213BBB4200102611 /* HomeTableViewCell.swift in Sources */,
-				1A5DE4B3213BC3CB00102611 /* DetailView.swift in Sources */,
+				1A2DDE38212F3DB80038E104 /* HomeTableViewCell.swift in Sources */,
+				1A1DD27E212F278E008FF51B /* String.swift in Sources */,
 				1A2DDE6C2134A3060038E104 /* AniList.swift in Sources */,
 				1A2DDE772134ACEE0038E104 /* AniListRepository.swift in Sources */,
-				1A5DE4AB213BBB4200102611 /* AnimeCollectionViewCell.swift in Sources */,
+				1A5DE4B3213BC3CB00102611 /* DetailView.swift in Sources */,
 				1A5DE4B4213BC3CB00102611 /* DetailCell.swift in Sources */,
 				1A2DDE692134A3060038E104 /* PageInfo.swift in Sources */,
+				1A5DE4B8213BC6D600102611 /* UIViewController.swift in Sources */,
 				1A2DDE6B2134A3060038E104 /* ErrorDescription.swift in Sources */,
-				1A1DD27E212F278E008FF51B /* String.swift in Sources */,
 				1A2DDE6E2134A3060038E104 /* Title.swift in Sources */,
 				1A2DDE7B2134AE360038E104 /* AniListQuerys.swift in Sources */,
-				1A5DE4B6213BC40400102611 /* UIViewController.swift in Sources */,
-				1A5DE4AC213BBB4200102611 /* AnimeListTableViewCell.swift in Sources */,
 				1A2DDE6A2134A3060038E104 /* Page.swift in Sources */,
 				1A2DDE712134A3060038E104 /* CoverImage.swift in Sources */,
 				1A2DDE702134A3060038E104 /* Media.swift in Sources */,
 				1A2DDE792134AD010038E104 /* Season.swift in Sources */,
-				1A5DE4A5213BBB2F00102611 /* Constants.swift in Sources */,
+				1A5DE4A1213BA90B00102611 /* Constants.swift in Sources */,
 				1A2DDE7D2135B2190038E104 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
