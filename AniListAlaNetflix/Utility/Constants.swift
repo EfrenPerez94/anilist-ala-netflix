@@ -8,5 +8,6 @@
 
 import Foundation
 
+typealias Parameters = [String: Any]
 /// Base URL to perform requests from AniList API.
-public let apiURL = "https://graphql.anilist.co"
+let apiURL = "https://graphql.anilist.co"
