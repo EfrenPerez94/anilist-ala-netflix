@@ -9,6 +9,12 @@
 import Foundation
 import UIKit
 
+extension UIColor {
+    convenience init(r: CGFloat, g: CGFloat, b: CGFloat, alpha: CGFloat = 1.0) {
+        self.init(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: alpha)
+    }
+}
+
 /// Use `GetColorError` to specify problems with getColor function.
 enum HexadecimalError: Error {
     case wrongHexadecimalValue
@@ -41,9 +47,9 @@ extension String {
         }
         var rgb: UInt32 = 0
         Scanner(string: hexadecimal).scanHexInt32(&rgb)
-        return UIColor.init(red: CGFloat((rgb & 0xFF0000) >> 16 / 255),
-                            green: CGFloat((rgb & 0x00FF00) >> 8 / 255),
-                            blue: CGFloat(rgb & 0x0000FF / 255),
+        return UIColor.init(r: CGFloat((rgb & 0xFF0000) >> 16),
+                            g: CGFloat((rgb & 0x00FF00) >> 8),
+                            b: CGFloat(rgb & 0x0000FF),
                             alpha: 1.0)
     }
 }
