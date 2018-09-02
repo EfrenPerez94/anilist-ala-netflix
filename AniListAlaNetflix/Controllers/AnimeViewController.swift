@@ -85,7 +85,7 @@ class AnimeViewController: UIViewController, UITableViewDelegate, UITableViewDat
     }
 
     func pushDetailViewFor(id: Int) {
-        print("present \(id)")
+        navigationController?.pushViewController(DetailViewController(with: id), animated: true)
     }
 }
 
@@ -119,9 +119,5 @@ extension AnimeViewController {
             cell.selectionStyle = .none
             return cell
         }
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationController?.pushViewController(DetailViewController(), animated: true)
     }
 }

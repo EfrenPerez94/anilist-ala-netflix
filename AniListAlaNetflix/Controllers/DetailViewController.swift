@@ -13,43 +13,79 @@ import AVFoundation
 /// Detail View Controller. Shows the details and the trailer for a specific anime.
 class DetailViewController: UIViewController {
     
-    var player = AVPlayer()
-    var controller = AVPlayerViewController()
+    // MARK: - Private properties
+    private var loadAnimeIndicator: UIActivityIndicatorView!
+    private var videoHeight: CGFloat = 0
+    private var animeID: Int
+    
+    // MARK: - Initializers
+    init(with id: Int) {
+        self.animeID = id
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     // MARK: - Life View Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "Generic anime"
-        setupTrailer(url: "https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4")
-        setupDetailView()
+        view.backgroundColor = .darkBackground
+        indicatorSetup()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let animeRepository = AniListRepository()
+        animeRepository.execute(query: retriveAnime(id: animeID)) { [weak self] data in
+            guard let weakSelf = self,
+                let anime = data else {
+                    fatalError("Nil value found")
+            }
+            DispatchQueue.main.async {
+                weakSelf.navigationItem.title = anime.data?.media?.title.romaji
+                weakSelf.trailerSetup(trailerURL: anime.data?.media?.trailer ?? "")
+                weakSelf.detailViewSetup(animeData: anime)
+                weakSelf.loadAnimeIndicator.removeFromSuperview()
+            }
+        }
     }
     
     // MARK: - Setup Functions
-    fileprivate func setupTrailer(url: String) {
+    
+    fileprivate func indicatorSetup() {
         
-        guard let url = URL(string: url) else {
-            let alert = UIAlertController(title: "Opps", message: "This anime doesn't have trailer!", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
-            present(alert, animated: true)
+        loadAnimeIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.white)
+        loadAnimeIndicator.center = view.center
+        loadAnimeIndicator.startAnimating()
+        view.addSubview(loadAnimeIndicator)
+    }
+    
+    fileprivate func trailerSetup(trailerURL: String) {
+        
+        guard let url = URL(string: trailerURL) else {
             return
         }
-        
-        let aspectRatio: CGFloat = 3 / 4
-        
-        player = AVPlayer(url: url)
-        controller.player = self.player
-        controller.view.frame = CGRect(x: 0, y: topBarHeight, width: view.frame.width, height: view.frame.width * aspectRatio)
-        controller.view.setNeedsLayout()
-        addChildViewController(controller)
-        view.addSubview(controller.view)
-        controller.didMove(toParentViewController: self)
+        let frame = CGRect(x: 0, y: topBarHeight, width: view.frame.width, height: view.frame.width * aspectRatio)
+        let player = AVPlayer(url: url)
+        let videoController = AVPlayerViewController()
+        videoController.player = player
+        videoController.view.frame = frame
+        videoController.view.setNeedsLayout()
+        addChildViewController((videoController))
+        view.addSubview((videoController.view))
+        videoController.didMove(toParentViewController: self)
+        videoHeight = videoController.view.frame.height
 
     }
     
-    fileprivate func setupDetailView() {
-        let detailHeight = view.frame.height - controller.view.frame.height
-        let yOrigin = controller.view.frame.height + topBarHeight
+    fileprivate func detailViewSetup(animeData: AniList) {
+        let detailHeight = view.bounds.height - videoHeight
+        let yOrigin = videoHeight + topBarHeight
         let table = DetailView(frame: CGRect(x: 0, y: yOrigin, width: view.frame.width, height: detailHeight))
+        
+        table.animeData = animeData
         view.addSubview(table)
     }
 }
