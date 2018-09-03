@@ -40,10 +40,12 @@ class DetailView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     private var isViewConstrained = false
     private let headers = ["Website:", "Status", "Season", "Format", "Episodes", "Duration"]
+    private let iconImages = [#imageLiteral(resourceName: "website"), #imageLiteral(resourceName: "status"), #imageLiteral(resourceName: "season"), #imageLiteral(resourceName: "format"), #imageLiteral(resourceName: "episodes"), #imageLiteral(resourceName: "duration")]
     
     lazy private var animePoster: UIImageView = {
         let animePoster = UIImageView()
         animePoster.translatesAutoresizingMaskIntoConstraints = false
+        animePoster.center = CGPoint(x: frame.width / 2, y: frame.height / 10)
         return animePoster
     }()
     
@@ -77,9 +79,9 @@ class DetailView: UIView, UITableViewDelegate, UITableViewDataSource {
                 animePoster.widthAnchor.constraint(equalTo: widthAnchor),
                 animePoster.centerXAnchor.constraint(equalTo: centerXAnchor),
                 
-                tableView.leftAnchor.constraint(equalTo: leftAnchor),
-                tableView.topAnchor.constraint(equalTo: animePoster.bottomAnchor, constant: 15),
-                tableView.rightAnchor.constraint(equalTo: rightAnchor),
+                tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+                tableView.topAnchor.constraint(equalTo: animePoster.bottomAnchor, constant: 10),
+                tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
                 tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100)
             ]
             NSLayoutConstraint.activate(constraints)
@@ -107,6 +109,7 @@ extension DetailView {
             cell.isUserInteractionEnabled = false
             cell.backgroundColor = .darkBackground
             cell.title.text = headers[indexPath.row - 1]
+            cell.iconImage.image = iconImages[indexPath.row - 1]
             switch indexPath.row {
             case 1: cell.message.text = animeData?.data?.media?.siteUrl ?? ""
             case 2: cell.message.text = animeData?.data?.media?.status ?? ""
@@ -121,8 +124,10 @@ extension DetailView {
             guard let cell = (tableView.dequeueReusableCell(withIdentifier: .descriptionCell, for: indexPath) as? DescriptionCell) else {
                 fatalError("DescriptionCell is not initialized")
             }
+            var text = "DESCRIPTION: \n\n"
+            text += animeData?.data?.media?.description ?? "No description available"
             cell.selectionStyle = .none
-            cell.message.text = animeData?.data?.media?.description
+            cell.message.text = text
             return cell
         }
     }
@@ -132,7 +137,18 @@ extension DetailView {
         if indexPath.row > 0 {
             return 60
         } else {
-            return frame.height / 4
+            var text = animeData?.data?.media?.description ?? ""
+            text += "\n\n\n\n"
+            if !text.isEmpty {
+                ///Allow obtain the frame for a bunch of text.
+                let estimatedFrame = NSString(string: text).boundingRect(
+                    with: CGSize(width: frame.width - 20, height: 1000),
+                    options: .usesLineFragmentOrigin,
+                    attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15)],
+                    context: nil)
+                return estimatedFrame.height
+            }
+            return 60
         }
     }
 }

@@ -32,7 +32,6 @@ final class DetailCell: UITableViewCell {
         let iconImage = UIImageView()
         iconImage.contentMode = .scaleAspectFit
         iconImage.translatesAutoresizingMaskIntoConstraints = false
-        iconImage.backgroundColor = try? "FFFF00".getColor()
         return iconImage
     }()
     

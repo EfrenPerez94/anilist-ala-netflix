@@ -49,6 +49,7 @@ final class AnimeCollectionViewCell: UICollectionViewCell {
     lazy private var animePoster: UIImageView = {
         let animePoster = UIImageView()
         animePoster.translatesAutoresizingMaskIntoConstraints = false
+        animePoster.center = CGPoint(x: frame.width / 2, y: (frame.height * aspectRatio) / 2)
         return animePoster
     }()
     

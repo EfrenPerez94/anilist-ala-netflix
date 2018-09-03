@@ -18,6 +18,6 @@ let aspectRatio: CGFloat = 3 / 4
 
 /// Palette color for the application.
 extension UIColor {
-    static let darkBackground = try? "0F0F0F".getColor()
-    static let lightTextColor = try? "EBEBEB".getColor()
+    static let darkBackground = try? "1F232C".getColor()
+    static let lightTextColor = try? "E1E1E1".getColor()
 }

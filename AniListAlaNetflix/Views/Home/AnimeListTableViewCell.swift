@@ -119,6 +119,7 @@ extension AnimeListTableViewCell {
         guard let cell = (collectionView.dequeueReusableCell(withReuseIdentifier: .animeCell, for: indexPath) as? AnimeCollectionViewCell) else {
             fatalError("AnimeCollectionViewCell is not initialized")
         }
+        cell.prepareForReuse()
         cell.cellData = seasonData?.data?.page?.media?[indexPath.row]
         cell.cellID = seasonData?.data?.page?.media?[indexPath.row].id
         return cell

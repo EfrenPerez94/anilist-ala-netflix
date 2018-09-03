@@ -28,10 +28,10 @@ final class DescriptionCell: UITableViewCell {
     
     lazy var message: UITextView = {
         let message = UITextView()
-        message.isEditable = false
+        message.isUserInteractionEnabled = false
         message.textColor = .lightTextColor
         message.font = UIFont.systemFont(ofSize: 15)
-        message.textAlignment = .center
+        message.textAlignment = .justified
         message.backgroundColor = .darkBackground
         message.translatesAutoresizingMaskIntoConstraints = false
         return message
@@ -50,10 +50,10 @@ final class DescriptionCell: UITableViewCell {
     private func setupConstraints() {
         if !isViewConstrained {
             let constraints = [
-                message.centerXAnchor.constraint(equalTo: centerXAnchor),
-                message.widthAnchor.constraint(equalTo: widthAnchor),
-                message.heightAnchor.constraint(equalTo: heightAnchor, constant: -10),
-                message.centerYAnchor.constraint(equalTo: centerYAnchor)
+                message.bottomAnchor.constraint(equalTo: bottomAnchor),
+                message.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+                message.topAnchor.constraint(equalTo: topAnchor),
+                message.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
             ]
             NSLayoutConstraint.activate(constraints)
             isViewConstrained = true

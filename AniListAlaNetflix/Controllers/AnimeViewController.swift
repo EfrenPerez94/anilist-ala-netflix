@@ -30,7 +30,7 @@ class AnimeViewController: UIViewController, UITableViewDelegate, UITableViewDat
         tableViewSetup()
         indicatorSetup()
     }
-    
+
     // MARK: - View Controller configuration
     /// Dispatch group. useful to wait until all the animes where retrieved.
     func getAllSeasons() {
