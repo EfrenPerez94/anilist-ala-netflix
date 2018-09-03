@@ -49,6 +49,7 @@ final class AnimeCollectionViewCell: UICollectionViewCell {
     lazy private var animePoster: UIImageView = {
         let animePoster = UIImageView()
         animePoster.translatesAutoresizingMaskIntoConstraints = false
+        animePoster.center = CGPoint(x: frame.width / 2, y: (frame.height * Constants.aspectRatio) / 2)
         return animePoster
     }()
     
@@ -66,7 +67,7 @@ final class AnimeCollectionViewCell: UICollectionViewCell {
         if !isViewConstrained {
             let contraints = [
                 animePoster.topAnchor.constraint(equalTo: topAnchor),
-                animePoster.heightAnchor.constraint(equalToConstant: frame.height * aspectRatio),
+                animePoster.heightAnchor.constraint(equalToConstant: frame.height * Constants.aspectRatio),
                 animePoster.widthAnchor.constraint(equalToConstant: frame.width),
                 animePoster.centerXAnchor.constraint(equalTo: centerXAnchor),
                 

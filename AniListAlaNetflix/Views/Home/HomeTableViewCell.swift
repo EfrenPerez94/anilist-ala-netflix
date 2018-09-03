@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 /// Home Table View Cell. Create a custom cell for Home.
-class HomeTableViewCell: UITableViewCell {
+final class HomeTableViewCell: UITableViewCell {
     
     // MARK: - Initializers
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
@@ -35,7 +35,7 @@ class HomeTableViewCell: UITableViewCell {
         return backgroundImage
     }()
     
-    lazy var message: UILabel = {
+    lazy private var message: UILabel = {
         let message = UILabel()
         message.textColor = .lightTextColor
         message.font = UIFont.systemFont(ofSize: 18)
@@ -60,7 +60,7 @@ class HomeTableViewCell: UITableViewCell {
             let constraints = [
                 backgroundImage.topAnchor.constraint(equalTo: topAnchor),
                 backgroundImage.centerXAnchor.constraint(equalTo: centerXAnchor),
-                backgroundImage.heightAnchor.constraint(equalToConstant: frame.height * aspectRatio),
+                backgroundImage.heightAnchor.constraint(equalToConstant: frame.height * Constants.aspectRatio),
                 
                 message.topAnchor.constraint(equalTo: backgroundImage.bottomAnchor, constant: 10),
                 message.widthAnchor.constraint(equalTo: widthAnchor),

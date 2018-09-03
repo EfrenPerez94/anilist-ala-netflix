@@ -33,6 +33,8 @@
 		1A5DE4B3213BC3CB00102611 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4B1213BC3CB00102611 /* DetailView.swift */; };
 		1A5DE4B4213BC3CB00102611 /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4B2213BC3CB00102611 /* DetailCell.swift */; };
 		1A5DE4B8213BC6D600102611 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4B7213BC6D600102611 /* UIViewController.swift */; };
+		1A5DE4BA213BCAEC00102611 /* DescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5DE4B9213BCAEB00102611 /* DescriptionCell.swift */; };
+		1AD9C5DC213D907A00580222 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD9C5DB213D907A00580222 /* UIColor.swift */; };
 		831F8B25BD7DC41D8CA9B37C /* Pods_AniListAlaNetflix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF14842D67B7B4D55C457B31 /* Pods_AniListAlaNetflix.framework */; };
 		A2BA46C3F98CB5F29333B5F4 /* Pods_AniListAlaNetflixTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F68A18EF45C71EF8A401C44 /* Pods_AniListAlaNetflixTests.framework */; };
 		F23EA4A530AFBE34D2D648A3 /* Pods_AniListAlaNetflixUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE190A65DB25F071F31E340F /* Pods_AniListAlaNetflixUITests.framework */; };
@@ -88,6 +90,8 @@
 		1A5DE4B1213BC3CB00102611 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		1A5DE4B2213BC3CB00102611 /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		1A5DE4B7213BC6D600102611 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		1A5DE4B9213BCAEB00102611 /* DescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescriptionCell.swift; sourceTree = "<group>"; };
+		1AD9C5DB213D907A00580222 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		639F3319BAF8814794CB449C /* Pods-AniListAlaNetflixTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniListAlaNetflixTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AniListAlaNetflixTests/Pods-AniListAlaNetflixTests.debug.xcconfig"; sourceTree = "<group>"; };
 		6F722848D21D6F508B254AE6 /* Pods-AniListAlaNetflix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniListAlaNetflix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AniListAlaNetflix/Pods-AniListAlaNetflix.debug.xcconfig"; sourceTree = "<group>"; };
 		8B29CC665BD68BA3CF0E9290 /* Pods-AniListAlaNetflixUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AniListAlaNetflixUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AniListAlaNetflixUITests/Pods-AniListAlaNetflixUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,9 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				1A2DDE732134AC340038E104 /* Network */,
-				1A5DE49F213BA90B00102611 /* Utility */,
-				1A5DE49E213BA7A400102611 /* Views */,
 				1A1DD271212F278E008FF51B /* Controllers */,
+				1A5DE49E213BA7A400102611 /* Views */,
+				1A5DE49F213BA90B00102611 /* Utility */,
 				1A1DD26D212F278E008FF51B /* Extensions */,
 				1A2DDE5C2134A3060038E104 /* Models */,
 				1A1DD244212F26E8008FF51B /* Assets.xcassets */,
@@ -190,6 +194,7 @@
 				1A5DE4B7213BC6D600102611 /* UIViewController.swift */,
 				1A1DD26E212F278E008FF51B /* String.swift */,
 				1A2DDE31212F3D950038E104 /* UIImageView.swift */,
+				1AD9C5DB213D907A00580222 /* UIColor.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			isa = PBXGroup;
 			children = (
 				1A5DE4B1213BC3CB00102611 /* DetailView.swift */,
+				1A5DE4B9213BCAEB00102611 /* DescriptionCell.swift */,
 				1A5DE4B2213BC3CB00102611 /* DetailCell.swift */,
 			);
 			path = Detail;
@@ -514,10 +520,12 @@
 				1A2DDE38212F3DB80038E104 /* HomeTableViewCell.swift in Sources */,
 				1A1DD27E212F278E008FF51B /* String.swift in Sources */,
 				1A2DDE6C2134A3060038E104 /* AniList.swift in Sources */,
+				1A5DE4BA213BCAEC00102611 /* DescriptionCell.swift in Sources */,
 				1A2DDE772134ACEE0038E104 /* AniListRepository.swift in Sources */,
 				1A5DE4B3213BC3CB00102611 /* DetailView.swift in Sources */,
 				1A5DE4B4213BC3CB00102611 /* DetailCell.swift in Sources */,
 				1A2DDE692134A3060038E104 /* PageInfo.swift in Sources */,
+				1AD9C5DC213D907A00580222 /* UIColor.swift in Sources */,
 				1A5DE4B8213BC6D600102611 /* UIViewController.swift in Sources */,
 				1A2DDE6B2134A3060038E104 /* ErrorDescription.swift in Sources */,
 				1A2DDE6E2134A3060038E104 /* Title.swift in Sources */,
@@ -693,6 +701,7 @@
 			baseConfigurationReference = 6F722848D21D6F508B254AE6 /* Pods-AniListAlaNetflix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AniListAlaNetflix/Info.plist;
@@ -713,6 +722,7 @@
 			baseConfigurationReference = C5D059B324179C406C6E4F6B /* Pods-AniListAlaNetflix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = AniListAlaNetflix/Info.plist;
