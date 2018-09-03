@@ -20,7 +20,7 @@ class DetailView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     var animeData: AniList? {
         didSet {
-            animePoster.imageFromURL(animeData?.data?.media?.bannerImage ?? "")
+            animePoster.imageFromURL(animeData?.data?.media?.bannerImage ?? animeData?.data?.media?.coverImage.large ?? "")
             tableView.reloadData()
         }
     }
