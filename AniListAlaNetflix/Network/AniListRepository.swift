@@ -11,14 +11,14 @@ import Foundation
 class AniListRepository {
     
     /// Perform a GET request to AniList, handling errors and response.
-    ///sdf
+    ///
     /// - Parameters:
     ///   - query: Use to specify the API endpoint.
     ///   - completion: Closure that returns `data` for the network request.
     ///   - data: Data information retrieve from the API as `AniList` object.
     func execute(query: Parameters, completion: @escaping (_ data: AniList?) -> Void) {
         
-        guard let url = URL(string: apiURL) else { return }
+        guard let url = URL(string: Constants.apiURL) else { return }
         var urlRequest = URLRequest(url: url)
         urlRequest.setDefaultHeaders()
         urlRequest.httpMethod = "POST"

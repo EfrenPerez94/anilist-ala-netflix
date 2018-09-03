@@ -16,7 +16,7 @@ private extension String {
 }
 
 /// Detail View. Show the anime description and organize the details on a table view.
-class DetailView: UIView, UITableViewDelegate, UITableViewDataSource {
+final class DetailView: UIView, UITableViewDelegate, UITableViewDataSource {
     
     var animeData: AniList? {
         didSet {
@@ -127,7 +127,7 @@ extension DetailView {
             var text = "DESCRIPTION: \n\n"
             text += animeData?.data?.media?.description ?? "No description available"
             cell.selectionStyle = .none
-            cell.message.text = text
+            cell.descriptionText = text
             return cell
         }
     }

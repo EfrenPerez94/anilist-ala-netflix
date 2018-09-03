@@ -12,6 +12,12 @@ import UIKit
 /// Home Table View Cell. Create a custom cell for Home.
 final class DescriptionCell: UITableViewCell {
     
+    var descriptionText: String? {
+        didSet {
+            message.text = descriptionText
+        }
+    }
+    
     // MARK: - Initializers
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -26,7 +32,7 @@ final class DescriptionCell: UITableViewCell {
     // MARK: - Private properties
     private var isViewConstrained = false
     
-    lazy var message: UITextView = {
+    lazy private var message: UITextView = {
         let message = UITextView()
         message.isUserInteractionEnabled = false
         message.textColor = .lightTextColor

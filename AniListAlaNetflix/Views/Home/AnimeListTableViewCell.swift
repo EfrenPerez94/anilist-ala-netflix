@@ -89,7 +89,7 @@ final class AnimeListTableViewCell: UITableViewCell, UICollectionViewDataSource,
             let contraints = [
                 seasonName.topAnchor.constraint(equalTo: topAnchor, constant: 5),
                 seasonName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-                seasonName.widthAnchor.constraint(equalToConstant: frame.width * aspectRatio),
+                seasonName.widthAnchor.constraint(equalToConstant: frame.width * Constants.aspectRatio),
                 seasonName.heightAnchor.constraint(equalToConstant: frame.height / 15),
                 
                 collectionView.topAnchor.constraint(equalTo: seasonName.bottomAnchor),
@@ -126,7 +126,7 @@ extension AnimeListTableViewCell {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let customCellHeight = frame.height * aspectRatio
+        let customCellHeight = frame.height * Constants.aspectRatio
         return CGSize(width: customCellHeight / 2, height: customCellHeight)
     }
     

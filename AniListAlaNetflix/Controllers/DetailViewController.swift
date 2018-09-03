@@ -41,7 +41,12 @@ class DetailViewController: UIViewController {
         animeRepository.execute(query: retriveAnime(id: animeID)) { [weak self] data in
             guard let weakSelf = self,
                 let anime = data else {
-                    fatalError("Nil value found")
+                    let alert = UIAlertController(title: "Error",
+                                                  message: "Description not available",
+                                                  preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                    self?.present(alert, animated: true)
+                    return
             }
             DispatchQueue.main.async {
                 weakSelf.navigationItem.title = anime.data?.media?.title.romaji
@@ -53,9 +58,7 @@ class DetailViewController: UIViewController {
     }
     
     // MARK: - Setup Functions
-    
     fileprivate func indicatorSetup() {
-        
         loadAnimeIndicator = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.white)
         loadAnimeIndicator.center = view.center
         loadAnimeIndicator.startAnimating()
@@ -67,7 +70,7 @@ class DetailViewController: UIViewController {
         guard let url = URL(string: trailerURL) else {
             return
         }
-        let frame = CGRect(x: 0, y: topBarHeight, width: view.frame.width, height: view.frame.width * aspectRatio)
+        let frame = CGRect(x: 0, y: topBarHeight, width: view.frame.width, height: view.frame.width * Constants.aspectRatio)
         let player = AVPlayer(url: url)
         let videoController = AVPlayerViewController()
         videoController.player = player
@@ -83,9 +86,9 @@ class DetailViewController: UIViewController {
     fileprivate func detailViewSetup(animeData: AniList) {
         let detailHeight = view.bounds.height - videoHeight
         let yOrigin = videoHeight + topBarHeight
-        let table = DetailView(frame: CGRect(x: 0, y: yOrigin, width: view.frame.width, height: detailHeight))
+        let detailView = DetailView(frame: CGRect(x: 0, y: yOrigin, width: view.frame.width, height: detailHeight))
         
-        table.animeData = animeData
-        view.addSubview(table)
+        detailView.animeData = animeData
+        view.addSubview(detailView)
     }
 }
